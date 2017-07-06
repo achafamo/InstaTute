@@ -2,8 +2,9 @@
   <div id="mentionable-data" data-content="<%= mentionable_user_path(current_user) %>"></div>
   <%= form_for @post, html: { class: 'post_form' } do |f| %>
     <div class="form-group">
-      <h4>Post discussion/question to class</h4>
-      <div id="post-content" contenteditable="true" class="editable form-control input-mentionable" placeholder="What's on your mind"></div>
+      <h4>Post your question to class</h4>
+      <div id="post-content" contenteditable="true" class="editable form-control input-mentionable" placeholder="Should we be using the log probabilities when training naive bayes, or when testing, or both?
+"></div>
       <%= f.hidden_field :content, value: @post.content, class: 'form-control input-mentionable', autofocus: true %>
     </div>
     <div id="img-preview" class="form-group hidden">

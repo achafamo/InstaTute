@@ -17,7 +17,7 @@ class Follow < ActiveRecord::Base
   end
 
   include PublicActivity::Model
-  tracked only: [:like], owner: Proc.new{ |controller, model| model.follower }
+  tracked only: [:create], owner: Proc.new{ |controller, model| model.follower }
 
   validates_presence_of :follower
   validates_presence_of :followable

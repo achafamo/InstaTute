@@ -1,0 +1,215 @@
+.hero {
+    background: transparent;
+}
+
+.splash {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+    /**
+    background-image: url(../img/s1_blue.jpg);
+    background-size: cover;
+    background-position: center;
+    **/
+}
+
+
+/**
+
+.::before {
+    display: block;
+    position: relative;
+    content: '';
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    height: 90px;
+    background-size: 40px 100%;
+    top: -90px;
+    background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, transparent), color-stop(0.25, lightgray));
+    background-image: -webkit-linear-gradient(135deg, whitesmoke 25%, transparent 25%), -webkit-linear-gradient( 45deg, lightgray 25%, transparent 25%);
+    background-image: linear-gradient(315deg, whitesmoke 25%, transparent 25%), linear-gradient( 45deg, lightgray 25%, transparent 25%);
+    background-position: 50%;
+}
+
+. {
+    background-color: whitesmoke;
+}
+
+**/
+
+.tagline {
+    font-family: 'Kavoon', cursive;
+    margin-top: 10px;
+    color: whitesmoke;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+
+/**.
+
+.container h1.display-4 {
+    margin-top: -60px;
+    font-family: 'Pridi', serif;
+    color: #3C425E;
+}
+
+. .container {
+    padding: 20px;
+}
+
+**/
+
+.pitch {
+    background-color: whitesmoke;
+    color: #06222E;
+    font-family: 'Pridi', serif;
+}
+
+.pitch-inner {
+    padding: 5em;
+}
+
+.sellingPoints {
+    padding-bottom: 3em;
+    color: whitesmoke;
+}
+
+.sellingPoints h2 {
+    font-family: 'Kavoon', cursive;
+}
+
+.sellingPoints h2.lead {
+    padding-top: 3em;
+}
+
+.sellingPoints .col-lg-4 {
+    padding: 1rem;
+}
+
+p.clouds {
+    margin-bottom: -0px;
+    z-index: 12;
+    overflow-x: hidden;
+}
+
+object.icon {
+    max-width: 100%;
+    height: auto;
+    padding-top: 10px;
+}
+
+img.appIcon {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav.navbar {
+    box-shadow: 0 1px 1px 0px rgba(0, 0, 50, 0.4);
+}
+
+#tiers {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+button.apply {
+    color: whitesmoke;
+}
+
+button.apply:hover {}
+
+button.menu {
+    background-color: transparent;
+}
+
+img.card-img-top {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 80px;
+}
+
+.card {
+    color: #286078;
+    background-color: whitesmoke;
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+.card:hover {
+    background-color: lightgray;
+}
+
+.signUpNow {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: 'Kavoon', cursive;
+}
+
+.signUpNow h1 {
+    display: block;
+}
+
+button#apply3 {
+    font-family: 'Pridi', serif;
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.footer-nav {
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'Pridi', serif;
+}
+
+.footer-nav h3 {
+    padding: -3px;
+    margin-bottom: -3px;
+}
+
+table.footer-nav a {
+    text-decoration: none;
+    color: #06222E;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+table.social {
+    margin-top: 20px;
+}
