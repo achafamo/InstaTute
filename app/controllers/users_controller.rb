@@ -7,10 +7,28 @@ class UsersController < ApplicationController
   before_action :set_user
   before_action :check_ownership, only: [:edit, :update]
   respond_to :html, :js
+  
+  
+  def index
+    if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    else
+    	@users = User.order('created_at DESC').paginate(page: params[:page], per_page: 30)
+		end  
+	end		
+  
+	def usersearch
+		if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    #else
+    	#@users = User.order('created_at DESC').paginate(page: params[:page], per_page: 30)
+		end  
+		
+	end		
 
   def show
     @activities = PublicActivity::Activity.where(owner: @user).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
-  end
+  end 
 
   def edit
   end
@@ -24,14 +42,16 @@ class UsersController < ApplicationController
   end
 
   def deactivate
-  end
+  end	
 
   def friends
     @friends = @user.following_users.paginate(page: params[:page])
+    
   end
 
   def followers
     @followers = @user.user_followers.paginate(page: params[:page])
+    @users = User.order('created_at DESC').paginate(page: params[:page], per_page: 30)
   end
 
   def mentionable
@@ -53,4 +73,5 @@ class UsersController < ApplicationController
     @user = User.friendly.find_by(slug: params[:id]) || User.find_by(id: params[:id])
     render_404 and return unless @user
   end
+
 end

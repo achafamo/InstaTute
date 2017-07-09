@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   acts_as_voter
   acts_as_follower
   acts_as_followable
+  acts_as_messageable
 
   has_many :posts
   has_many :comments
@@ -25,4 +26,19 @@ class User < ActiveRecord::Base
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
+  def mailboxer_email(object)
+	 #return the model's email here
+	  return self.email
+	end
+  
+
+def self.search(search)
+	if search != " "
+		find(:all, :conditions => ['name ILIKE ?', "%#{search}%"])
+	else
+		find(:all)
+	end
+end
+
+
 end

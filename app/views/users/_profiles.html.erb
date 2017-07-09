@@ -1,0 +1,26 @@
+<% if false %>	
+	<% users.each do |profile| %>
+		<div class = "container" >
+			<% unless profile == current_user %>
+			  <p style="float:left"><%= gravatar_for profile %></p>
+			
+				<h5><%= link_to profile.name, profile %></h5>
+			  <p style="float:left"><%= link_to 'Send message', new_message_path(to: profile.id), class: 'btn btn-success btn-sm' %></p>
+	 		<% end %>
+		</div>
+		
+	<% end %>
+<% end %>
+<div class="row">
+  <% @users.each do |profile| %>
+    <div class="col-sm-6 ">
+      <div>
+        <%= render 'shared/avatar', user: @user %><br>
+        <div class="caption">
+          <h5><%= link_to profile.name, profile %></h5>
+      	  <p style="float:left"><%= link_to 'Send message', new_message_path(to: profile.id), class: 'btn btn-success btn-sm' %></p>>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

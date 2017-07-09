@@ -19,6 +19,11 @@
 //= require fullcalendar.min
 //= require jquery.datetimepicker
 //= require_tree .
+//= require jquery.turbolinks
+//= require chosen-jquery
+//= require messages
+
+
 
 $(document).ready(function () {
   $("#event_event_datetime").datetimepicker({format: 'Y/m/d H:i'});

@@ -1,0 +1,10 @@
+<div class="col-lg-6 well">
+  <h3>Search Results</h3>
+  <hr>
+	<% if @users.present? %>
+ 		 <p><%= render 'users/profiles', users: @users %></p>	
+	<% else %>
+  	<p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+	<% end %>
+   
+</div>

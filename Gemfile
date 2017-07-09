@@ -52,10 +52,17 @@ gem 'xmlrpc'
 gem 'will_paginate', '~> 3.1.0'
 gem 'public_activity'
 
+gem "mailboxer"
+gem 'gravatar_image_tag'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'acts_as_commentable'
 gem 'acts_as_follower'
 gem 'counter_culture', '~> 0.1.33'
+gem 'chosen-rails'
+#gem 'sass-rails', '~> 4.0.5'
+gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-turbolinks'
+
 
 gem 'faker'
 gem 'populator'

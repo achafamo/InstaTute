@@ -4,12 +4,33 @@
   </div>
   <div class="col-lg-6 well">
     <h3>Tutors</h3>
-    <hr>
-    <div id="followers">
-      <%= render(@followers) || render('shared/no_resource', resources: 'Tutors')  %>
-    </div>
-    <%= render 'shared/paginate', resources: @followers %>
+		<hr>
+	  <p><%= render 'users/profiles', users: @users %></p>
+		<% if false %>
+    
+			<ul>
+				<% @users.each do |user| %>
+					<li>
+						
+						<div class="col-lg-3">
+    					<%= render 'shared/user_info', user: user %>
+  					</div>
+						
+							<strong><%= user.name %></strong>			
+									
+							<% unless current_user == user %>
+								<%= link_to 'Send message', new_message_path(to: user.id), class: 'btn btn-default btn-sm btn-warning'  %>
+							<% end %>
+							<br>
+							<br>
+						
+					</li>
+				<% end %>
+			</ul>
+		  <%end %>
+    
   </div>
+  
   <div class="col-lg-3">
     <%= render 'shared/links' %>
   </div>

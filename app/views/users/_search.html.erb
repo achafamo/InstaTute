@@ -1,0 +1,17 @@
+<div id="newsfeed" class="col-lg-6">
+	<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+	<%= text_field_tag :search, params[:search], placeholder: "Search For Tutors" %>
+	<%= submit_tag "Search" %>
+<% end %>
+
+</div>
+<div class="col-lg-6 well">
+  <h3>Search Results</h3>
+  <hr>
+	<% if @users.present? %>
+ 		 <p><%= render 'users/profiles', users: @users %></p>	
+	<% else %>
+  	<p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+	<% end %>
+   
+</div>

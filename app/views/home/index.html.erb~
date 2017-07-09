@@ -1,0 +1,57 @@
+<div class="row">
+	<div class="col-lg-3">
+    <%= render 'shared/user_info' %>
+  </div>  
+	<div id="newsfeed" class="col-lg-6">
+			<%= form_tag(usersearch_path, :method => "get", id: "search-form") do %>
+			<%= text_field_tag :search, params[:search], placeholder: "Search For Tutors by class" %>
+			<%= submit_tag "Search" %>
+		<% end %>
+  
+	</div>
+ 	<div class="col-sm-6 well">
+	  <h3>Search Results</h3>
+	  <hr>
+		<% if @users.present? %>
+	 		 <p><%= render 'users/profiles', users: @users %></p>	
+		<% else %>
+	  		<p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+		<% end %>
+   
+</div>
+  
+   <% if false %>  
+	  <div id="newsfeed" class="col-lg-6">
+			<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+			<%= text_field_tag :search, params[:search], placeholder: "Search For Tutors" %>
+			<%= submit_tag "Search" %>
+		<% end %>
+  
+		</div>
+		<% if @users %>
+		   <p><%= render 'users/profiles', users: @users %></p>	
+		<% end %>
+		<div id="newsfeed" class="col-lg-6">
+			<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+			<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+			<%= submit_tag "Search" %>
+		<% end %>
+		  <%= render 'posts/form' %>
+		  <br>
+		  <div id="activities">
+		    <% if @activities.empty? %>
+		<div class="well">
+			<%= render('shared/no_resource', resources: 'Activities') %>
+		</div>
+		    <% else %>
+		<%= render_activities(@activities, layout: '/shared/activity') %>
+		    <% end %>
+		  </div>
+		  <%= render 'shared/paginate', resources: @activities %>
+		</div>
+
+  <% end %>
+  <div class="col-lg-3">
+    <%= render 'shared/links' %>
+  </div>
+</div>

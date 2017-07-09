@@ -20,6 +20,15 @@ class ApplicationController < ActionController::Base
       format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
     end
   end
+  rescue_from ActiveRecord::RecordNotFound do
+    flash[:warning] = 'Resource not found.'
+    redirect_back_or root_path
+	end
+
+	def redirect_back_or(path)
+		redirect_to request.referer || path
+	end
+
 
   include PublicActivity::StoreController
 end

@@ -2,15 +2,31 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :comments, only: [:create, :destroy]
+	resources :conversations, only: [:index, :show, :destroy] do
+		collection do
+	    delete :empty_trash
+	  end
+		member do
+		  post :restore
+		  post :reply
+		  post :mark_as_read
+		end
+	end
+
+  resources :messages, only: [:new, :create]
+
   devise_for :users
-  resources :users do
+  resources :users do	  
+    
     member do
       get :friends
       get :followers
       get :deactivate
-      get :mentionable
+      get :mentionable     
+      		
     end
   end
+  
 
   resources :events do
     collection do
@@ -25,6 +41,12 @@ Rails.application.routes.draw do
     root 'home#front'
   end
 
+ 
+  if Rails.env.development? and defined?(Localtower)
+    mount Localtower::Engine, at: "localtower"
+  end
+
+  match :usersearch, to: 'users#usersearch', as: :usersearch, via: :get
   match :follow, to: 'follows#create', as: :follow, via: :post
   match :unfollow, to: 'follows#destroy', as: :unfollow, via: :post
   match :like, to: 'likes#create', as: :like, via: :post
