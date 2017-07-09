@@ -17,7 +17,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users do	  
-    
+    collection do
+			get :usersearch
+			get :index
+	  end
     member do
       get :friends
       get :followers

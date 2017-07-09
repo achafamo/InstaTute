@@ -17,7 +17,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users do	  
-    
+    collection do
+			get :usersearch
+	  end
     member do
       get :friends
       get :followers
@@ -46,7 +48,7 @@ Rails.application.routes.draw do
     mount Localtower::Engine, at: "localtower"
   end
 
-  match :user_search, to: 'users#user_search', as: :user_search, via: :get
+  match :usersearch, to: 'users#usersearch', as: :usersearch, via: :get
   match :follow, to: 'follows#create', as: :follow, via: :post
   match :unfollow, to: 'follows#destroy', as: :unfollow, via: :post
   match :like, to: 'likes#create', as: :like, via: :post

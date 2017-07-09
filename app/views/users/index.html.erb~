@@ -4,7 +4,7 @@
 	<% if @users.present? %>
  		 <p><%= render 'users/profiles', users: @users %></p>	
 	<% else %>
-  	<p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+  		<p>There are no posts containing the term(s) <%= params[:search] %>.</p>
 	<% end %>
    
 </div>

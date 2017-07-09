@@ -4,7 +4,7 @@
 
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_user, only: [:search]
+  before_action :set_user
   before_action :check_ownership, only: [:edit, :update]
   respond_to :html, :js
   
@@ -20,8 +20,8 @@ class UsersController < ApplicationController
 	def usersearch
 		if params[:search]
       @users = User.search(params[:search]).order("created_at DESC")
-    #else
-    	#@users = User.order('created_at DESC').paginate(page: params[:page], per_page: 30)
+    else
+    	@users = User.order('created_at DESC').paginate(page: params[:page], per_page: 30)
 		end  
 		
 	end		
