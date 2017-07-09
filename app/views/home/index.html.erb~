@@ -3,23 +3,25 @@
     <%= render 'shared/user_info' %>
   </div>  
 	<div id="newsfeed" class="col-lg-6">
-			<%= form_tag(usersearch_path, :method => "get", id: "search-form") do %>
+			<%= form_tag(users_path, :method => "get", id: "search-form") do %>
 			<%= text_field_tag :search, params[:search], placeholder: "Search For Tutors by class" %>
 			<%= submit_tag "Search", name: nil %>
 		<% end %>
+		<%= form_tag users_path, :method => 'get' do %>	
+			<%= hidden_field_tag :direction, params[:direction] %>
+			 <%= hidden_field_tag :sort, params[:sort] %>
+			<p>
+			<%= text_field_tag :search, params[:search] %>
+			<%= submit_tag "Search Classes", :project_name => nil %>
+			</p>
+			<p>
+			<%= text_field_tag :search, params[:search] %>
+			<%= submit_tag "Search Tutors", :client => nil %>
+			</p>
+		<% end %> 
   
 	</div>
- 	<div class="col-sm-6 well">
-	  <h3>Search Results</h3>
-	  <hr>
-		<% if @users.present? %>
-	 		 <p><%= render 'users/profiles', users: @users %></p>	
-		<% else %>
-	  		<p>There are no posts containing the term(s) <%= params[:search] %>.</p>
-		<% end %>
-	</end>
-   
-</div>
+ 	
   
    <% if false %>  
 	  <div id="newsfeed" class="col-lg-6">
