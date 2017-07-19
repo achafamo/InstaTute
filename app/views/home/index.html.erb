@@ -1,26 +1,36 @@
 <div class="row">
-	<div class="col-lg-3">
-    <%= render 'shared/user_info' %>
-  </div>  
-	<div id="newsfeed" class="col-lg-6">
-			
-		<%= form_tag users_path, :method => 'get' do %>	
-			<%= hidden_field_tag :direction, params[:direction] %>
-			 <%= hidden_field_tag :sort, params[:sort] %>
-			<p>
-			<%= text_field_tag :search, params[:search] %>
-			<%= submit_tag "Search Classes", :project_name => nil %>
-			</p>
-			<p>
-			<%= text_field_tag :search, params[:search] %>
-			<%= submit_tag "Search Tutors", :client => nil %>
-			</p>
-		<% end %> 
+  <div class="col-lg-3">
+    <%= render 'shared/links' %>
+  </div>
+  <div>
+    
+    <hr>
+    <div id="calendr" class = "col-lg-9">
+			<iframe src="https://calendar.google.com/calendar/embed?src=colgate.edu_m63pld411ffgte76kg78a3hqks%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+		</div>
+  </div>
   
-	</div>
+</div>
+	 <% if false %>
+		<div id="newsfeed" class="col-lg-6">
+			
+			<%= form_tag users_path, :method => 'get' do %>	
+				<%= hidden_field_tag :direction, params[:direction] %>
+				 <%= hidden_field_tag :sort, params[:sort] %>
+				<p>
+				<%= text_field_tag :search, params[:search] %>
+				<%= submit_tag "Search Classes", :project_name => nil %>
+				</p>
+				<p>
+				<%= text_field_tag :search, params[:search] %>
+				<%= submit_tag "Search Tutors", :client => nil %>
+				</p>
+			<% end %> 
+	  
+		</div>
  	
   
-   <% if false %>  
+    
 	  <div id="newsfeed" class="col-lg-6">
 			<%= form_tag(users_path, :method => "get", id: "search-form") do %>
 			<%= text_field_tag :search, params[:search], placeholder: "Search For Tutors" %>
@@ -50,8 +60,9 @@
 		  <%= render 'shared/paginate', resources: @activities %>
 		</div>
 
-  <% end %>
-  <div class="col-lg-3">
-    <%= render 'shared/links' %>
-  </div>
+  
+		<div class="col-lg-3">
+		  <%= render 'shared/links' %>
+		</div>
+	<% end %>
 </div>

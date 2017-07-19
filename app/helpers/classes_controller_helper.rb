@@ -1,0 +1,2 @@
+module ClassesControllerHelper
+end

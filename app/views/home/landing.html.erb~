@@ -1,0 +1,187 @@
+
+<body>
+    <!-- Nav -->
+
+    <nav class="navbar navbar-light navbar-fixed-top navbar-full bg-faded hidden-md-up">
+        <div class="container">
+            <button type="button" class="btn btn-primary apply pull-xs-right" id="apply"> BOOK SESSION </button>
+            <button class="btn menu" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">&#9776;</button>
+            <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
+                <a class="navbar-brand hidden-sm-down" href="#top"><img src="img/InstatuteAppIcon.png" alt="" class="appIcon">InstaTute</a>
+                <ul class="nav navbar-nav pull-xs-left">
+                    <li class="nav-item"> <a class="nav-link" data-toggle="collapse" data-target="#exCollapsingNavbar2" href="#top">Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link"  href="http://tutors.instatute.org">Tutors</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="collapse" data-target="#exCollapsingNavbar2" href="#pitch">What We Do</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="collapse" data-target="#exCollapsingNavbar2" href="#sellingPoints">Simple and Straightforward</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="collapse" data-target="#exCollapsingNavbar2" href="#tiers">Products</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-light navbar-fixed-top navbar-full bg-faded  hidden-sm-down">
+        <div class="container">
+            <button type="button" class="btn btn-primary apply pull-xs-right" id="apply2"> BOOK SESSION </button>
+            <div class="" id="">
+                <a class="navbar-brand hidden-sm-down" href="#top"><img src="img/InstatuteAppIcon.png" alt="" class="appIcon">InstaTute</a>
+                <ul class="nav navbar-nav pull-xs-left">
+                    <li class="nav-item active"> <a class="nav-link" data-toggle="collapse" data-target="#exCollapsingNavbar2" href="#top">Home <span class="sr-only">(current)</span></a> </li>
+                     <li class="nav-item"> <a class="nav-link"  href="http://tutors.instatute.org">Tutors</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="collapse" data-target="#exCollapsingNavbar2" href="#pitch">What We Do</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="collapse" data-target="#exCollapsingNavbar2" href="#sellingPoints">Simple and Straightforward</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="collapse" data-target="#exCollapsingNavbar2" href="#tiers">Products</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main" id="top">
+        <!-- Hero -->
+        <section class="page splash parallax-window" data-parallax="scroll" data-image-src="img/s1_blue.jpg" data-speed="0.2" data-bleed="2" data-ios-fix="true" data-android-fix="true">
+            <div class="hero jumbotron">
+                <div class="container-fluid text-xs-center foo"> <img src="img/InstatuteText.png" alt="InstaTute" class="img-fluid center-block">
+                    <h2 class="tagline foo">Students Helping Students</h2></h2> </div>
+            </div>
+        </section>
+        <!--  Pitch -->
+        <section class="page pitch" id="pitch">
+            <div class="container text-xs-center pitch-inner">
+                <h1 class="display-3 foo">What We Do</h1>
+                <div class="container">
+                    <p class="lead foo"> InstaTute is an online community that connects students with peer tutors who have excelled in similar courses. Our main goal is to provide timely help to students while keeping the hours flexible and the information current. We are committed to work within the busy college lifestyle to make tutoring at school more accessible to all while building strong campus unity and student involvement.</p>
+                </div>
+            </div>
+        </section>
+        <!--  Selling Points -->
+        <section class="page sellingPoints text-xs-center parallax-window" id="sellingPoints" data-parallax="scroll" data-image-src="img/s4_brown.jpg" data-speed="0" data-bleed="2" data-ios-fix="true" data-android-fix="true">
+            <div class="container-fluid">
+                <div class="col-lg-4">
+                    <h2 class="lead foo">STEP 1</h2>
+                    <h2>Select Your Course</h2>
+                    <object class="icon foo" type="image/svg+xml" data="img/research.svg" width="200" height="200" border="0"></object>
+                </div>
+                <div class="col-lg-4">
+                    <h2 class="lead foo">STEP 2</h2>
+                    <h2>Find Your Tutuor</h2>
+                    <object class="icon foo" type="image/svg+xml" data="img/girl.svg" width="200" height="200" border="0"></object>
+                </div>
+                <div class="col-lg-4">
+                    <h2 class="lead foo">STEP 3</h2>
+                    <h2>Get Help</h2>
+                    <object class="icon foo" type="image/svg+xml" data="img/chat.svg" width="200" height="200" border="0"></object>
+                </div>
+            </div>
+        </section>
+        <!--
+        <section class="page pricing pitch" id="tiers">
+            <div class="container text-xs-center">
+                <h1 class="display-4 foo">Products</h1>
+                <div class="card-deck-wrapper">
+                    <div class="card-deck">
+                        <div class="card"> <img class="card-img-top" src="img/burger.svg" data-src="img/burger.svg" alt="Card image cap">
+                            <div class="card-block foo">
+                                <h4 class="card-title">Office Hours</h4>
+                                <p class="card-text">&#187; Scheduled personal or group session</p>
+                                <p class="card-text">&#187; Locations at major campus libraries/study spaces</p>
+                                <p class="card-text">&#187; Select from a range of qualified peer tutors</p>
+                                <p class="card-text">&#187; Transparent upfront pricings</p>
+                            </div>
+                        </div>
+                        <div class="card"> <img class="card-img-top" src="img/biggerBurger.svg" data-src="img/biggerBurger.svg" alt="Card image cap">
+                            <div class="card-block foo">
+                                <h4 class="card-title">Cram Session</h4>
+                                <p class="card-text">&#187; On-demand assistance when you need it most</p>
+                                <p class="card-text">&#187; 24/7 access to a network of qualified peer tutors</p>
+                                <p class="card-text">&#187; Affordable pay-per-minute pricings</p>
+                                <p class="card-text">&#187; Save sessions for later review</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+        <!-- Last Call to Action -->
+        <section class="sellingPoints signUpNow parallax-window" id="signUpNow" data-parallax="scroll" data-image-src="img/s3_blue.jpg" data-speed="0" data-bleed="2" data-ios-fix="true" data-android-fix="true">
+            <div class="container text-xs-center">
+                <h1 class="foo">$20/hour 1-on-1 private tutoring</h1>
+                <button type="button" class="btn btn-primary center-block" id="apply3"> Book Session </button>
+            </div>
+        </section>
+        <!-- Contact & Footer -->
+        <section class="page contact-footer footer-nav">
+            <div class="container">
+                <div class="col-lg-8">
+                    <h3 class="">InstaTute</h3>
+                    <table class="footer-nav">
+                        <tr>
+                            <td>
+                                <a class="nav-link" href="#top">
+                                    <p>HOME</p>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="nav-link" href="#pitch">
+                                    <p>WHAT WE DO</p>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="nav-link" href="#sellingPoints">
+                                    <p>SIMPLE AND STRAIGHTFORWARD</p>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="nav-link" href="#tiers">
+                                    <p>PRODUCTS</p>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                             <a class="nav-link" href="http://docs.instatute.org/Instatute-PP.pdf">
+                                    <p>Privacy Policy</p>
+                                </a>, 
+                                <a class="nav-link" href="http://docs.instatute.org/Instatute_Tutor_Terms_of_Service.pdf">
+                                    <p>Tutor Terms of Use</p>
+
+                                </a>, and 
+                                <a class="nav-link" href="http://docs.instatute.org/Instatute-Web-TOS.pdf">
+                                    <p>Terms of Service</p>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-4 text-xs-right">
+                    <h3>Stay In Touch</h3>
+                    <table class="social">
+                        <tr>
+                            <td>
+                                <h5>Drop us a line at: <a href="mailto:team@instatute.org">team@instatute.org</a></h5><h5>(408) 614-7830</h5></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Copyright &copy; 2016 InstaTute Inc.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/i18n/jquery-ui-i18n.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.amaran/0.5.4/jquery.amaran.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

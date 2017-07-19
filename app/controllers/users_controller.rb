@@ -20,11 +20,10 @@ class UsersController < ApplicationController
   
 	def usersearch
 		if params[:search]
-      @users = User.search(params[:search]).order("created_at DESC")
-    else
-    	@users = User.order('created_at DESC').paginate(page: params[:page], per_page: 30)
-		end  
-		
+			@users = User.search(params[:search]).order("created_at DESC")
+		else
+			@users = User.order('created_at DESC').paginate(page: params[:page], per_page: 30)
+		end
 	end		
 
   def show

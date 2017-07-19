@@ -1,11 +1,11 @@
 <div class="col-lg-6 well">
-  <div id="newsfeed" class="col-lg-6">
+  <div id="newsfeed" class="col-lg-12">
 			<%= form_tag(users_path, :method => "get", id: "search-form") do %>
-			<%= text_field_tag :search, params[:search], placeholder: "Search For Tutors" %>
+			<%= text_field_tag :search, params[:search], placeholder: "Search For Classmates" %>
 			<%= submit_tag "Search" %>
 		<% end %>
 	</div>
-  <h3>Search Results</h3>
+  <h3></h3>
   <hr>
 	<% if @users.present? %>
  		 <p><%= render 'users/profiles', users: @users %></p>	

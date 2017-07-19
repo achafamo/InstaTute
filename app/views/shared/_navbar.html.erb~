@@ -22,14 +22,11 @@
             </ul>
           </li>
         <% else %>
-	  <li>
-	  <a class="btn btn-warning">
-	  <%= fa_icon 'star'%>
-          <%= link_to  'About', about_path %>
-	  </a>
-	  </li>
+          <li><%= link_to  'About', about_path %></li>
+	  
           <li><%= link_to 'Sign up', new_user_registration_path %></li>
           <li><%= link_to 'Sign in', user_session_path %></li>
+	  <li><%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %></li>
         <% end %>
       </ul>
     </div>

@@ -15,11 +15,13 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:new, :create]
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   resources :users do	  
     collection do
 			get :usersearch
 			get :index
+			get :google_oauth2
 	  end
     member do
       get :friends
@@ -36,6 +38,11 @@ Rails.application.routes.draw do
       get :calendar
     end
   end
+	resources :courses do 
+		collection do
+			get :index
+		end
+	end
 
   authenticated :user do
     root to: 'home#index', as: 'home'
@@ -48,9 +55,9 @@ Rails.application.routes.draw do
   if Rails.env.development? and defined?(Localtower)
     mount Localtower::Engine, at: "localtower"
   end
-
+  match :request_tutor, to: redirect("http://www.colgate.edu/centers-and-institutes/center-for-learning-teaching-and-research"), as: :request_tutor, via: :get
   match :usersearch, to: 'users#usersearch', as: :usersearch, via: :get
-  match :follow, to: 'follows#create', as: :follow, via: :post
+  match :follow, to: 'follows#create', as: :follow, via: :post #classes are models that can be followed 
   match :unfollow, to: 'follows#destroy', as: :unfollow, via: :post
   match :like, to: 'likes#create', as: :like, via: :post
   match :unlike, to: 'likes#destroy', as: :unlike, via: :post

@@ -19,7 +19,10 @@ class HomeController < ApplicationController
 
   def front
     @activities = PublicActivity::Activity.joins("INNER JOIN users ON activities.owner_id = users.id").order(created_at: :desc).paginate(page: params[:page], per_page: 10)
-  end
+  	#render :file => 'public/index.html'
+	end
+	def landing
+	end
 
   def find_friends
     @friends = @user.all_following

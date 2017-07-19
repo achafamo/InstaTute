@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_merit
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
-    :recoverable, :rememberable, :trackable, :validatable
+    :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
   acts_as_voter
   acts_as_follower
   acts_as_followable
@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
   has_many :events
+  has_many :courses
 
   mount_uploader :avatar, AvatarUploader
   mount_uploader :cover, AvatarUploader
@@ -32,13 +33,32 @@ class User < ActiveRecord::Base
 	end
   
 
-def self.search(search)
-	if search != " "
-		find(:all, :conditions => ['name ILIKE ?', "%#{search}%"])
-	else
-		find(:all)
+	def self.search(search)
+		if search != " "
+			find(:all, :conditions => ['name ILIKE ?', "%#{search}%"])
+		else
+			find(:all)
+		end
 	end
-end
+	def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
+    data = access_token.info
+    user = User.where(:provider => access_token.provider, :uid => access_token.uid ).first
+    if user
+      return user
+    else
+      registered_user = User.where(:email => access_token.info.email).first
+      if registered_user
+        return registered_user
+      else
+        user = User.create(name: data["name"],
+          provider:access_token.provider,
+          email: data["email"],
+          uid: access_token.uid ,
+          password: Devise.friendly_token[0,20],
+        )
+      end
+   	end
+	end
 
 
 end

@@ -48,10 +48,11 @@ gem 'devise'
 gem 'carrierwave',  '>= 1.0.0.rc', '< 2.0'
 gem 'friendly_id', '~> 5.0'
 gem 'xmlrpc'
-
+gem 'google-api-client'
 gem 'will_paginate', '~> 3.1.0'
 gem 'public_activity'
-
+gem 'omniauth'
+gem 'omniauth-google-oauth2' 
 gem "mailboxer"
 gem 'gravatar_image_tag'
 gem 'acts_as_votable', '~> 0.10.0'
@@ -62,7 +63,7 @@ gem 'chosen-rails'
 #gem 'sass-rails', '~> 4.0.5'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-turbolinks'
-
+gem 'paperclip'
 
 gem 'faker'
 gem 'populator'

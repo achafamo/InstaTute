@@ -1,0 +1,9 @@
+class CoursesControllerController < ApplicationController
+	 def index
+    if params[:search]
+      @courses = Course.search(params[:search]).order("created_at DESC")
+    else
+    	@users = Course.order('created_at DESC').paginate(page: params[:page], per_page: 30)
+		end 	
+	end	
+end

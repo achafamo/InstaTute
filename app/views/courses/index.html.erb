@@ -1,0 +1,14 @@
+<div class="row">
+  
+  <div class="col-lg-6 well">
+    <h3>My Courses</h3>
+    <hr>
+    <div id="followers">
+      <%= render(@courses) || render('shared/no_resource', resources: 'Followers')  %>
+    </div>
+    <%= render 'shared/paginate', resources: @followers %>
+  </div>
+  <div class="col-lg-3">
+    <%= render 'shared/classlinks' %>
+  </div>
+</div>
