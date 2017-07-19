@@ -4,9 +4,10 @@
     <h3>My Courses</h3>
     <hr>
     <div id="followers">
-      <%= render(@courses) || render('shared/no_resource', resources: 'Followers')  %>
+      <p><%= render 'courses/course', users: @users %></p>
+		 	<hr>
     </div>
-    <%= render 'shared/paginate', resources: @followers %>
+    
   </div>
   <div class="col-lg-3">
     <%= render 'shared/classlinks' %>

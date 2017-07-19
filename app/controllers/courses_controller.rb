@@ -19,7 +19,7 @@ class CoursesController < ApplicationController
   def create
     @course = current_user.courses.new(course_params)
     if @course.save
-      redirect_to root_path
+      redirect_to courses_path
     else
       redirect_to root_path, notice: @post.errors.full_messages.first
     end
