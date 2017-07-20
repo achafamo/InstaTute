@@ -10,16 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery.atwho
 //= require jquery_ujs
-//= require bootstrap
 //= require bindWithDelay
 //= require moment.min
 //= require fullcalendar.min
 //= require jquery.datetimepicker
 //= require_tree .
 //= require jquery.turbolinks
+//= require bootstrap
 //= require chosen-jquery
 //= require messages
 

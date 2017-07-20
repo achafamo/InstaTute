@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
     if params[:search]
       @courses = Course.search(params[:search]).order("created_at DESC")
     else
-    	@courses = Course.order('created_at DESC').paginate(page: params[:page], per_page: 30)
+    	@courses = @current_user.courses #Course.order('created_at DESC').paginate(page: params[:page], per_page: 30)
 		end 	
 	end
 	def show
