@@ -82,9 +82,9 @@ Rails.application.configure do
 		storage: :s3,
 		s3_credentials: {
 		  bucket: ENV.fetch('S3_BUCKET'),
-		  access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-		  secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-		  s3_region: ENV.fetch('AWS_REGION'),
+		  access_key_id: ENV.fetch('S3_ACCESS_KEY'),
+		  secret_access_key: ENV.fetch('S3_SECRET_KEY'),
+		  s3_region: ENV.fetch('S3_REGION'),
 		}
 	}
   ActionMailer::Base.delivery_method = :smtp
