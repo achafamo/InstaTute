@@ -42,6 +42,7 @@ group :production do
   gem 'rails_12factor'
   gem 'fog', '~> 1.36.0'
   gem 'fog-aws'
+  gem 'aws-sdk', '~> 2.3'
 end
 
 gem 'devise'

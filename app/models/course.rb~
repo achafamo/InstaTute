@@ -1,4 +1,6 @@
 class Course < ApplicationRecord
-	has_attached_file :image, styles: { small: "64x64", med: "100x100", large: "200x200" }
+	belongs_to :user
+	has_attached_file :syllabus, styles: { small: "64x64", med: "100x100", large: "200x200" }
 
+	validates_attachment_content_type :syllabus, :content_type => ["syllabus/jpg", "syllabus/jpeg", "syllabus/png", "syllabs/pdf"]
 end

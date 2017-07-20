@@ -63,7 +63,7 @@ gem 'chosen-rails'
 #gem 'sass-rails', '~> 4.0.5'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-turbolinks'
-
+gem 'paperclip'
 
 gem 'faker'
 gem 'populator'

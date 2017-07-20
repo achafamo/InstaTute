@@ -17,7 +17,7 @@ class CoursesController < ApplicationController
 		@course = Course.new
 	end
   def create
-    @course = current_user.courses.new(course_params)
+    @course = @current_user.courses.new(course_params)
     if @course.save
       redirect_to courses_path
     else
@@ -27,7 +27,7 @@ class CoursesController < ApplicationController
 
 	private
 	def course_params
-		params.require(:course).permit(:name)
+		params.require(:course).permit(:name, :syllabus)
 	end
 	def set_user
 		@user = current_user

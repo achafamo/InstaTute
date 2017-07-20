@@ -1,5 +1,7 @@
 <div class="row">
-  
+  <div class="col-lg-3">
+    <%= render 'shared/links' %>
+  </div>
   <div>
     
     <hr>
@@ -63,7 +65,4 @@
 		  <%= render 'shared/links' %>
 		</div>
 	<% end %>
-	<div class="col-lg-3">
-    <%= render 'shared/links' %>
-  </div>
 </div>

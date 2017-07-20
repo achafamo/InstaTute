@@ -4,7 +4,7 @@
     <h3>My Courses</h3>
     <hr>
     <div id="followers">
-      <h5><%= render 'courses/course', users: @users %></h5>
+      <p><%= render 'courses/course', users: @users %></p>
 		 	<hr>
     </div>
     
